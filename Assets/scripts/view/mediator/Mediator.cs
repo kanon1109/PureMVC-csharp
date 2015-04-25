@@ -8,7 +8,7 @@ namespace Assets.scripts.view.mediator
 class Mediator
 {
     //mediator名字
-    public String name;
+    public String name = null;
     public Mediator()
     {
 

@@ -9,9 +9,8 @@ class ModelCommand:Command
 {
     public override void execute(Notification notification)
     {
-        //this.facade.registerMediator(new TestMediator());
-        Console.Write("ModelCommand execute");
-        base.execute(notification);
+        //在这里将所有Proxy注册创建
+        Console.Write("ModelCommand execute over");
     }
 }
 }

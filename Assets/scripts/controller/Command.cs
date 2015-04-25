@@ -14,7 +14,7 @@ class Command
     }
 
     //执行
-    public void execute(Notification notification)
+    public virtual void execute(Notification notification)
     {
         //子类继承
         Console.Write("Command execute");

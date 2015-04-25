@@ -7,7 +7,7 @@ namespace Assets.scripts.proxy
 //管理数据
 class Proxy
 {
-    public String name;
+    public String name = null;
     public Proxy()
     {
 

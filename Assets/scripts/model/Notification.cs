@@ -9,8 +9,8 @@ namespace Assets.scripts.model
 class Notification
 {
     //消息名
-    public String notificationName;
+    public String notificationName = null;
     //附带对象
-    public Object obj;
+    public Object obj = null;
 }
 }

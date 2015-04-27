@@ -15,19 +15,22 @@ public class NotificationCenter
         this.dict = new Dictionary<string, List<HandlerDelegate>>();
     }
 
-    //获取单例
+    /// <summary>
+    /// 获取单例
+    /// </summary>
+    /// <returns></returns>
     public static NotificationCenter getInstance()
     {
-        if(instance == null) instance = new NotificationCenter();
+        if (instance == null) instance = new NotificationCenter();
         return instance;
     }
 
-    /**
-     * 发送消息
-     * @param	name    消息名称
-     * @param	obj     消息所带参数
-     * returns
-     */
+    /// <summary>
+    /// 发送消息
+    /// </summary>
+    /// <param name="name">消息名称</param>
+    /// <param name="obj">消息所带参数</param>
+    /// <returns></returns>
     public void postNotification(String name, Object obj)
     {
         if (!this.dict.ContainsKey(name)) return;
@@ -40,23 +43,22 @@ public class NotificationCenter
         }
     }
 
-    /**
-     * 发送消息
-     * @param	name    消息名称
-     * @param	obj     消息所带参数
-     * returns
-     */
+    /// <summary>
+    /// 发送消息
+    /// </summary>
+    /// <param name="name">消息名称</param>
+    /// <returns></returns>
     public void postNotification(String name)
     {
         this.postNotification(name, null);
     }
 
-    /**
-     * 添加消息观察者
-     * @param	name        消息名称
-     * @param	handler     消息的回调
-     * returns
-     */
+    /// <summary>
+    /// 添加消息观察者
+    /// </summary>
+    /// <param name="name">消息名称</param>
+    /// <param name="handler">消息的回调</param>
+    /// <returns></returns>
     public void addObserver(String name, HandlerDelegate handler)
     {
         List<HandlerDelegate> delegateList;
@@ -75,22 +77,22 @@ public class NotificationCenter
         }
     }
 
-    /**
-     * 删除此消息的所有观察者
-     * @param	name    消息名称
-     * returns
-     */
+    /// <summary>
+    /// 删除此消息的所有观察者
+    /// </summary>
+    /// <param name="name">消息名称</param>
+    /// <returns></returns>
     public void removeObserver(String name)
     {
         if (!this.dict.ContainsKey(name)) return;
         List<HandlerDelegate> delegateList = this.dict[name];
         delegateList.Clear();
     }
-    
-    /**
-     * 删除所有观察者
-     * returns
-     */
+
+    /// <summary>
+    /// 删除所有观察者
+    /// </summary>
+    /// <returns></returns>
     public void removeObservers()
     {
         this.dict.Clear();

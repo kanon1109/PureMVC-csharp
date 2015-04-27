@@ -25,8 +25,8 @@ public class Proxy
     /// <summary>
     /// 发送mvc消息
     /// </summary>
-    /// <param name="notificationName"></param> 消息名称
-    /// <param name="obj"></param>              附带数据
+    /// <param name="notificationName">消息名称</param>
+    /// <param name="obj">附带数据</param>
     /// <returns></returns>
     protected virtual void sendNotification(String notificationName, Object obj)
     {
@@ -36,7 +36,7 @@ public class Proxy
     /// <summary>
     /// 发送mvc消息
     /// </summary>
-    /// <param name="notificationName"></param> 消息名称
+    /// <param name="notificationName">消息名称</param>
     /// <returns></returns>
     protected virtual void sendNotification(String notificationName)
     {
@@ -46,8 +46,8 @@ public class Proxy
     /// <summary>
     /// 获取proxy实例
     /// </summary>
-    /// <param name="name"></param> proxy名称
-    /// <returns></returns>
+    /// <param name="name">proxy名称</param>
+    /// <returns>proxy</returns>
     protected Proxy retrieveProxy(String name)
     {
         return this.facade.retrieveProxy(name);

@@ -30,7 +30,7 @@ public class Facade
     /// <summary>
     /// 获取proxy实例
     /// </summary>
-    /// <param name="name"></param> proxy名称
+    /// <param name="name">proxy名称</param>
     /// <returns></returns>
     public Proxy retrieveProxy(String name)
     {
@@ -41,7 +41,7 @@ public class Facade
     /// <summary>
     /// 获取mediator实例
     /// </summary>
-    /// <param name="name"></param> mediator名称
+    /// <param name="name">mediator名称</param>
     /// <returns></returns>
     public Mediator retrieveMediator(String name)
     {
@@ -51,7 +51,7 @@ public class Facade
     /// <summary>
     /// 注册mediator
     /// </summary>
-    /// <param name="mediator"></param>
+    /// <param name="mediator">mediator</param>
     /// <returns></returns>
     public void registerMediator(Mediator mediator)
     {
@@ -61,7 +61,7 @@ public class Facade
     /// <summary>
     /// 注册proxy
     /// </summary>
-    /// <param name="proxy"></param>
+    /// <param name="proxy">proxy</param>
     /// <returns></returns>
     public void registerProxy(Proxy proxy)
     {
@@ -84,8 +84,8 @@ public class Facade
     /// <summary>
     /// 发送mvc消息
     /// </summary>
-    /// <param name="notificationName"></param> 消息名称
-    /// <param name="obj"></param>              附带数据
+    /// <param name="notificationName">消息名称</param>
+    /// <param name="obj">附带数据</param>
     /// <returns></returns>
     public void sendNotification(String notificationName, Object obj)
     {
@@ -98,7 +98,7 @@ public class Facade
     /// <summary>
     /// 发送不带参数的消息
     /// </summary>
-    /// <param name="notificationName"></param>
+    /// <param name="notificationName">消息名称</param>
     /// <returns></returns>
     public void sendNotification(String notificationName)
     {

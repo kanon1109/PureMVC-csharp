@@ -33,6 +33,7 @@ public class Mediator
             if(name.Equals(notification.notificationName))
             {
                 this.handleNotification(notification);
+                break;
             }
         }
     }

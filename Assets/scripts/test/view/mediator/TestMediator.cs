@@ -15,6 +15,7 @@ public class TestMediator : Mediator
         });
         //添加感兴趣的消息
         this.notificationList.Add("btnClick");
+        this.notificationList.Add("btnClick2");
         this.tp = this.retrieveProxy("TestProxy") as TestProxy;
     }
 
@@ -22,6 +23,7 @@ public class TestMediator : Mediator
     {
         MonoBehaviour.print("name = " + sender.name);
         this.tp.addCount();
+        this.sendNotification("btnClick2");
     }
 
     protected override void handleNotification(Notification notification)
@@ -32,6 +34,9 @@ public class TestMediator : Mediator
                 //接受到了 textProxy发送来的消息
                 MonoBehaviour.print("btnClick");
                 this.testPanel.btn.gameObject.GetComponentInChildren<Text>().text = this.tp.index.ToString();
+                break;
+            case "btnClick2":
+                MonoBehaviour.print("btnClick2");
                 break;
         }
     }

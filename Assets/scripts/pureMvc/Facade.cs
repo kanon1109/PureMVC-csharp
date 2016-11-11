@@ -69,6 +69,26 @@ public class Facade
     }
 
     /// <summary>
+    /// 删除proxy
+    /// </summary>
+    /// <param name="name">proxy名字</param>
+    public void removeProxy(String name)
+    {
+        if(this.proxyDict.ContainsKey(name))
+            this.proxyDict.Remove(name);
+    }
+
+    /// <summary>
+    /// 删除mediator
+    /// </summary>
+    /// <param name="name">mediator名字</param>
+    public void removeMediator(String name)
+    {
+        if (this.mediatorDict.ContainsKey(name))
+            this.mediatorDict.Remove(name);
+    }
+
+    /// <summary>
     /// 初始化proxy
     /// </summary>
     /// <returns></returns>
